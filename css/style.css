@@ -1,6 +1,10 @@
 /* GENERAL STYLES */
-body {
+* {
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: sans-serif;
 }
 
@@ -39,6 +43,8 @@ img {
   background-color: #f5f3ff;
   border: 1px solid #dcd7ff;
   padding-block: 10px;
+  position: fixed;
+  width: 100%;
 }
 
 #nav-bar .container {
@@ -66,6 +72,7 @@ img {
   margin-inline: 10px;
   font-weight: 500;
   transition: all 0.3s;
+  margin-top: 15px;
 }
 
 #nav-bar .nav-links li:first-child {
@@ -80,7 +87,7 @@ img {
 /* Hero Styles */
 
 #hero {
-  padding-block: 50px;
+  padding-block: 100px;
 }
 
 #hero .hero-img {
@@ -113,6 +120,7 @@ img {
 #hero .hero-content > .title > h1 {
   font-size: 48px;
   font-weight: 700;
+  margin-block: 10px 20px;
 }
 
 #hero .hero-content > h1 > span {
@@ -121,11 +129,17 @@ img {
 
 #hero .hero-content > .title > p {
   font-size: 20px;
+  margin-bottom: 20px;
   font-weight: 400;
   line-height: 32.5px;
 }
 
 #hero .hero-content > .prices {
+  margin-bottom: 20px;
+}
+
+#hero .hero-content > .prices > p {
+  margin-block: 20px;
 }
 
 #hero .hero-content > .prices > span:first-child {
@@ -173,4 +187,131 @@ img {
 #hero .hero-content > .hero-btns > button:last-child {
   background-color: transparent;
   border: 2px solid #d1d5dc;
+}
+
+/* Start specifications Style */
+
+#specifications {
+  background-color: #f7f5ff;
+  padding-block: 50px;
+  color: #333333;
+}
+
+#specifications .title {
+  text-align: center;
+}
+#specifications .title > h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+#specifications .title > h2 > span {
+  color: #8e51ff;
+}
+
+#specifications .title > h2 + p {
+  font-size: 20px;
+  margin-block: 20px;
+}
+
+#specifications table {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 50px;
+  border: #d1d5dc 2px solid;
+  border-radius: 24px;
+  border-spacing: 0;
+}
+
+#specifications table th,
+#specifications table td {
+  padding: 20px;
+  border-bottom: 1px solid #edeef1;
+}
+
+#specifications table th {
+  border-bottom: 2px solid #dadee3;
+}
+
+#specifications table th {
+  text-align: start;
+}
+
+#specifications tr > th:not(th:first-child),
+#specifications tr > td:not(td:first-child) {
+  text-align: center;
+}
+
+#specifications span,
+i {
+  margin-right: 2px;
+}
+
+.oval {
+  background-color: #8e51ff;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+#specifications tr td:nth-child(2) {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+#specifications table tfoot td p {
+  margin-top: 10px;
+}
+#specifications table tfoot tr td {
+  border-bottom: none;
+}
+
+i[class="fa-solid fa-star"] {
+  color: #fdc700;
+}
+
+#specifications table tfoot tr td:not(td:nth-child(2)) p {
+  font-weight: 600;
+}
+
+#specifications table thead tr th p {
+  font-size: 14px;
+  font-weight: 700;
+  color: #6a7282;
+  margin-block: 10px;
+}
+
+#specifications table thead th:nth-child(2),
+#specifications table tr td:nth-child(2) {
+  background-color: #ede9fe;
+}
+
+#specifications table thead th:nth-child(2) {
+  border-radius: 16px 16px 0 0;
+}
+#specifications table tfoot tr td:nth-child(2) {
+  border-radius: 0 0 16px 16px;
+}
+
+#specifications
+  table
+  tbody
+  tr:last-child
+  td:not(td:first-child):not(td:nth-child(2)) {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#specifications .winner {
+  margin-top: 30px;
+  width: 30%;
+  margin-inline: auto;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px #e5e7eb solid;
+  background-color: white;
+  color: #00c950;
+}
+
+#specifications .winner .winner-text {
+  float: left;
+  margin-left: 10px;
 }
