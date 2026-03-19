@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -44,6 +45,7 @@ img {
   border: 1px solid #dcd7ff;
   padding-block: 10px;
   position: fixed;
+  z-index: 99;
   width: 100%;
 }
 
@@ -57,6 +59,7 @@ img {
 }
 #nav-bar .nav-logo i {
   display: inline-block;
+  width: 50px;
   padding: 12px 10px;
   border-radius: 8px;
   background-color: #8e51ff;
@@ -314,4 +317,215 @@ i[class="fa-solid fa-star"] {
 #specifications .winner .winner-text {
   float: left;
   margin-left: 10px;
+}
+
+/* Start reviews style */
+
+#reviews {
+  background-color: #ffffff;
+  padding-block: 50px;
+  color: #333333;
+}
+
+#reviews .title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#reviews .title h2 {
+  margin-block: 20px;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+#reviews .title h2 + p {
+  font-size: 20px;
+}
+
+#reviews .reviews {
+  width: 65%;
+}
+
+#reviews .reviews .review .person .img-wrapper {
+  width: 55px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #a684ff;
+  float: left;
+  margin-right: 20px;
+}
+
+#reviews .reviews .review .person .person-details {
+  float: left;
+}
+
+#reviews .reviews .review .person .person-details h4 {
+  font-size: 18px;
+  font-weight: 700;
+}
+#reviews .reviews .review .person .person-details p:nth-child(2) {
+  margin-block: 5px;
+}
+#reviews .reviews .review .person .person-details p:last-child {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#reviews .reviews {
+  float: right;
+}
+#reviews .rating {
+  float: left;
+}
+
+#reviews .reviews .review {
+  position: relative;
+  padding: 32px;
+  border-radius: 16px;
+  border: 2px #e5e7eb solid;
+  margin-bottom: 30px;
+}
+
+#reviews .reviews .review blockquote {
+  margin-top: 20px;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+#reviews .reviews .review > .status-badge {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  text-align: right;
+  font-size: 12px;
+}
+
+#reviews .reviews button {
+  background-color: #8e51ff;
+  border: solid 2px #8e51ff;
+  color: white;
+  font-weight: 600;
+  padding: 16px 32px;
+  border-radius: 100px;
+  cursor: pointer;
+  display: block;
+  margin-inline: auto;
+  transition: all 0.3s;
+}
+
+#reviews .reviews button:hover {
+  background-color: #ffffff;
+  color: #8e51ff;
+}
+
+#reviews .reviews .review > .status-badge > p:first-child {
+  font-weight: 600;
+  background-color: #ede9fe;
+  color: #5d0ec0;
+  border-radius: 50px;
+  padding: 4px 12px;
+}
+
+#reviews .rating {
+  position: sticky;
+  top: 50px;
+  width: 31%;
+  padding: 32px;
+  border-radius: 24px;
+  border: solid 2px #e5e7eb;
+}
+#reviews .rating > .total-rate {
+  text-align: center;
+}
+#reviews .rating > .total-rate > h4 {
+  font-size: 60px;
+  font-weight: 700;
+}
+#reviews .rating > .total-rate > h4 ~ i {
+  font-size: 20px;
+  margin-block: 10px;
+}
+#reviews .rating > .total-rate > p {
+  font-weight: 500;
+}
+
+#reviews .rating .rate-bars {
+  text-align: start;
+}
+
+#reviews .rating .rate-bars .rate-bar span {
+  display: inline-block;
+}
+
+#reviews .rating .rate-bars .rate-bar {
+  margin-block: 20px;
+}
+
+#reviews .rating .rate-bars .rate-bar .loading-bar {
+  display: inline-block;
+  width: 230px;
+  height: 10px;
+  border-radius: 100px;
+  background-color: #e5e7eb;
+}
+
+#reviews .rating .rate-bars .rate-bar .loading-bar > .complete {
+  width: 78%;
+  height: 100%;
+  border-radius: 100px;
+  background-color: #f0b100;
+}
+
+#reviews .rating .rate-bars .rate-bar:nth-child(2) .loading-bar > .complete {
+  width: 15%;
+  height: 100%;
+  border-radius: 100px;
+  background-color: #f0b100;
+}
+
+#reviews .rating .rate-bars .rate-bar:nth-child(3) .loading-bar > .complete {
+  width: 5%;
+  height: 100%;
+  border-radius: 100px;
+  background-color: #f0b100;
+}
+
+#reviews .rating .rate-bars .rate-bar:nth-child(4) .loading-bar > .complete {
+  width: 1.5%;
+  height: 100%;
+  border-radius: 100px;
+  background-color: #f0b100;
+}
+
+#reviews .rating .rate-bars .rate-bar:last-child .loading-bar > .complete {
+  width: 0.5%;
+  height: 100%;
+  border-radius: 100px;
+  background-color: #f0b100;
+}
+
+#reviews .rating .statistics {
+  border-top: 1px solid black;
+  margin-top: 30px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+#reviews .rating .statistics div:first-child {
+  float: left;
+  margin-left: 20px;
+}
+
+#reviews .rating .statistics div:nth-child(2) {
+  margin-right: 20px;
+  float: right;
+}
+
+#reviews .rating .statistics div p:first-child {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+#reviews .rating .statistics div p:last-child {
+  font-size: 14px;
 }
