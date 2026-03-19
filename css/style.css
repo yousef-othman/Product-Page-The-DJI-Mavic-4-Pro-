@@ -39,6 +39,26 @@ img {
   margin-inline: auto;
 }
 
+.badge {
+  color: white;
+  border-radius: 100px;
+  padding: 4px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+}
+
+.btn {
+  font-weight: 600;
+  padding: 16px 32px;
+  border-radius: 100px;
+  cursor: pointer;
+  display: block;
+  margin-inline: auto;
+  transition: all 0.3s;
+  font-size: 16px;
+}
+
 /* NAVBAR STYLES */
 #nav-bar {
   background-color: #f5f3ff;
@@ -76,6 +96,17 @@ img {
   font-weight: 500;
   transition: all 0.3s;
   margin-top: 15px;
+  position: relative;
+}
+
+#nav-bar .nav-links li:hover::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #7e23fe;
 }
 
 #nav-bar .nav-links li:first-child {
@@ -98,6 +129,14 @@ img {
   padding: 20px;
   border-radius: 24px;
   border: 2px solid #98a3b14d;
+  position: relative;
+}
+
+#hero .hero-img .badge {
+  background-color: #8e51ff;
+  top: 40px;
+  left: 40px;
+  font-weight: 700;
 }
 
 #hero .hero-img .img-wrapper {
@@ -404,13 +443,6 @@ i[class="fa-solid fa-star"] {
   background-color: #8e51ff;
   border: solid 2px #8e51ff;
   color: white;
-  font-weight: 600;
-  padding: 16px 32px;
-  border-radius: 100px;
-  cursor: pointer;
-  display: block;
-  margin-inline: auto;
-  transition: all 0.3s;
 }
 
 #reviews .reviews button:hover {
@@ -505,7 +537,7 @@ i[class="fa-solid fa-star"] {
 }
 
 #reviews .rating .statistics {
-  border-top: 1px solid black;
+  border-top: 1px solid #d1d5dc;
   margin-top: 30px;
   padding-top: 30px;
   text-align: center;
@@ -528,4 +560,85 @@ i[class="fa-solid fa-star"] {
 }
 #reviews .rating .statistics div p:last-child {
   font-size: 14px;
+}
+
+/* Start related-products styles */
+
+#related-products {
+  color: #333;
+  background-color: #f7f5ff;
+  padding-block: 50px;
+}
+
+#related-products .title {
+  text-align: center;
+}
+#related-products .title h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+#related-products .title h2 + p {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+#related-products .products .outer {
+  width: 25%;
+  padding-inline: 20px;
+}
+
+#related-products .products .outer .inner {
+  background-color: white;
+  padding: 24px;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  position: relative;
+}
+
+#related-products .products .outer .inner .img-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+#related-products .products .outer .inner .badge {
+  top: 40px;
+  left: 40px;
+}
+
+#related-products .products .outer .inner .text-wrapper h3 {
+  margin-top: 20px;
+}
+
+#related-products .products .outer .inner .text-wrapper p {
+  margin-block: 20px;
+}
+
+#related-products .products .outer .inner .cart button {
+  cursor: pointer;
+  padding: 8px 16px;
+  background-color: #8e51ff;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#related-products .products .outer .inner:hover .img-wrapper {
+  transform: scale(1.05);
+}
+
+#related-products .products > button {
+  cursor: pointer;
+  margin-block: 50px;
+  background-color: transparent;
+  border: 2px #7f22fe solid;
+  color: #7f22fe;
+}
+
+#related-products .products > button:hover {
+  background-color: #7f22fe;
+  color: white;
 }
